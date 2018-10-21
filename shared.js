@@ -1,13 +1,7 @@
 var addUnblockButton = function(selector) {
   var $content = $(selector).first();
 
-  var msg = [
-    "Better things to do:",
-    "- Read a book",
-    "- Write in your journal",
-    "- Talk to friends",
-    "- Do graphics work"
-  ].join("<br>");
+  var msg = "You are in control of absolutely everything that is going on in your life.";
 
   var holdLength = 5000;
   var intervalLength = 100;
@@ -35,10 +29,11 @@ var addUnblockButton = function(selector) {
       'font-family': 'monospace',
       'font-color': 'red',
       'font-size': fontSize,
+      'max-width': '500px',
       'min-height': fontSize * 1.5,
       'line-height': fontSize * 1.5 + "px",
       'text-align': 'left',
-      'margin-left': 30
+      'margin-left': 30,
     })
     .html(msg)
     .mousedown(function(evt) {
